@@ -25,10 +25,16 @@ export default defineConfig({
     },
   },
   shortcuts: {
-    'a_navItem': {
-      '@apply': 'p-0 my-auto align-baseline text-[14px] transition-all text-[#222222] dark:text-white',
+    'a_navBar__item': {
+      '@apply': 'p-0 my-auto align-baseline text-[14px] transition-all text-[#333333] dark:text-[#FFFFFF]',
       '&:hover': {
-        '@apply': 'transition-all text-[#555555] dark:text-[#777777]',
+        '@apply': 'transition-all text-[#111111] dark:text-[#0F0]',
+      }
+    },
+    'a_link': {
+      '@apply': 'underline transition-all text-[#9f1239] dark:text-[#0F0] text-',
+      '&:hover': {
+        '@apply': 'underline-offset-2 decoration-4 transition-all'
       }
     },
     'btn-green': 'text-white bg-green-500 hover:bg-green-700',
