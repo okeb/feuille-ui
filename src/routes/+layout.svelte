@@ -28,37 +28,111 @@
 
 	const hotkeys = [
     {
+      id: "Docs",
+      title: "Ouvrir la documentation",
+      section: "Suggestion",
+      hotkey: "ctrl+d",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M21 22H3V2h12v2h2v2h2v2h2v14zM17 6h-2v2h2V6zM5 4v16h14V10h-6V4H5zm8 12H7v2h6v-2zm-6-4h10v2H7v-2zm4-4H7v2h4V8z"/></svg>&nbsp;&nbsp;&nbsp;`,
+      children: ['getting started','installation','configuration','naming'],
+      handler: () => {
+        // open menu if closed. Because you can open directly that menu from it's hotkey
+        ninja.open({ parent: 'Docs' });
+        // if menu opened that prevent it from closing on select that action, no need if you don't have child actions
+        return {keepOpen: true};
+      },
+    },
+    {
       id: "Accueil",
       title: "Allez à l'accueil",
-      hotkey: "ctrl+h",
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M14 2h-4v2H8v2H6v2H4v2H2v2h2v10h7v-6h2v6h7V12h2v-2h-2V8h-2V6h-2V4h-2V2zm0 2v2h2v2h2v2h2v2h-2v8h-3v-6H9v6H6v-8H4v-2h2V8h2V6h2V4h4z"/></svg>&nbsp;&nbsp;&nbsp;`,
+      section: "Suggestion",
+      hotkey: "ctrl+a",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M13 2h-2v6h2V2zm0 14h-2v6h2v-6zm9-5v2h-6v-2h6zM8 13v-2H2v2h6zm7-6h2v2h-2V7zm4-2h-2v2h2V5zM9 7H7v2h2V7zM5 5h2v2H5V5zm10 12h2v2h2v-2h-2v-2h-2v2zm-8 0v-2h2v2H7v2H5v-2h2z"/></svg>&nbsp;&nbsp;&nbsp;`,
       handler: () => {
         document.getElementById("home").click();
       }
     },
     {
-      id: "Docs",
-      title: "Ouvrir la documentation",
-      hotkey: "ctrl+d",
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M6 3h14v2h2v6h-2v8h-2V5H6V3zm8 14v-2H6V5H4v10H2v4h2v2h14v-2h-2v-2h-2zm0 0v2H4v-2h10zM8 7h8v2H8V7zm8 4H8v2h8v-2z"/></svg>&nbsp;&nbsp;&nbsp;`,
-      handler: () => {
-        document.getElementById("docs").click();
-      }
-    },
-    {
       id: "signin",
       title: "Se connecter",
+      section: "Suggestion",
       hotkey: "ctrl+l",
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M15 2H9v2H7v2h2V4h6v4H4v14h16V8h-3V4h-2V2zm0 8h3v10H6V10h9zm-2 3h-2v4h2v-4z"/></svg>&nbsp;&nbsp;&nbsp;`,
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M5 3h14v2H5V3zm0 16H3V5h2v14zm14 0v2H5v-2h14zm0 0h2V5h-2v14zM10 8H8v2h2V8zm4 0h2v2h-2V8zm1 5H9v2h6v-2z"/></svg>&nbsp;&nbsp;&nbsp;`,
       handler: () => {
         document.getElementById("signin").click();
       }
     },
     {
+      id: "feedback",
+      title: "Envoyer un commentaire...",
+      hotkey: "ctrl+J",
+      section: "Aide",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M22 2H2v14h2V4h16v12h-8v2h-2v2H8v-4H2v2h4v4h4v-2h2v-2h10V2z"/></svg>&nbsp;&nbsp;&nbsp;`,
+      handler: () => {
+        document.getElementById("signin").click();
+      }
+    },
+    {
+      id: "bug",
+      title: "Signaler un bug...",
+      hotkey: "ctrl+q",
+      section: "Aide",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M8 2h2v4h4V2h2v4h2v3h2v2h-2v2h4v2h-4v2h2v2h-2v3H6v-3H4v-2h2v-2H2v-2h4v-2H4V9h2V6h2V2Zm8 6H8v3h8V8Zm-5 5H8v7h3v-7Zm2 7h3v-7h-3v7ZM4 9H2V7h2v2Zm0 10v2H2v-2h2Zm16 0h2v2h-2v-2Zm0-10V7h2v2h-2Z"/></svg>&nbsp;&nbsp;&nbsp;`,
+      handler: () => {
+        document.getElementById("signin").click();
+      }
+    },
+    {
+      id: "contact",
+      title: "Contacter le support...",
+      hotkey: "ctrl+h",
+      section: "Aide",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M22 4H2v16h20V4zM4 18V6h16v12H4zM8 8H6v2h2v2h2v2h4v-2h2v-2h2V8h-2v2h-2v2h-4v-2H8V8z"/></svg>&nbsp;&nbsp;&nbsp;`,
+      handler: () => {
+        document.getElementById("signin").click();
+      }
+    },
+    // {
+    //   id: "logout",
+    //   title: "Se deconnecter",
+    //   hotkey: "ctrl+shift+l",
+    //   icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M10 3H8v2H6v2h2V5h2v2h2v2h-2v2H8v2H6v2H4v-2H2v2h2v2h2v-2h4v2h2v2h-2v2h2v-2h2v-2h-2v-4h2v-2h2v2h2v2h2v-2h2v-2h-2v2h-2v-2h-2V9h2V5h-4v2h-2V5h-2V3z"/></svg>&nbsp;&nbsp;&nbsp;`,
+    //   handler: () => {
+    //     document.getElementById("signin").click();
+    //   }
+    // },
+    // {
+    //   id: "forgetpassword",
+    //   title: "Mot de passe oublié ?",
+    //   hotkey: "ctrl+shift+p",
+    //   icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M15 2H9v2H7v4H4v14h16V8h-3V4h-2V2zm0 2v4H9V4h6zm-6 6h9v10H6V10h3zm4 3h-2v4h2v-4z"/></svg>&nbsp;&nbsp;&nbsp;`,
+    //   handler: () => {
+    //     document.getElementById("signin").click();
+    //   }
+    // },
+    // {
+    //   id: "signup",
+    //   title: "S'inscrire",
+    //   hotkey: "ctrl+shift+i",
+    //   icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2h-6v2h-2v6h2V4h6V2zm0 8h-6v2h6v-2zm0-6h2v6h-2V4zM7 16h2v-2h12v2H9v4h12v-4h2v6H7v-6zM3 8h2v2h2v2H5v2H3v-2H1v-2h2V8z"/></svg>&nbsp;&nbsp;&nbsp;`,
+    //   handler: () => {
+    //     document.getElementById("signin").click();
+    //   }
+    // },
+    // {
+    //   id: "newsletter",
+    //   title: "S'inscrire à la newsletter",
+    //   hotkey: "ctrl+shift+n",
+    //   icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h18v10h-2V6H4v12h8v2H2V4h2zm4 4H6v2h2v2h2v2h4v-2h2v-2h2V8h-2v2h-2v2h-4v-2H8V8zm6 10h2v2h-2v-2zm4 2v2h-2v-2h2zm2-2h-2v2h2v-2zm0 0v-2h2v2h-2z"/></svg>&nbsp;&nbsp;&nbsp;`,
+    //   handler: () => {
+    //     document.getElementById("signin").click();
+    //   }
+    // },
+    {
       id: "Theme",
       title: "theme...",
       hotkey: 'ctrl+t',
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h18v14h-6v2H8v-2H2V4h2zm16 12V6H4v10h16z"/></svg>&nbsp;&nbsp;&nbsp;`,
+      section: 'Paramètres',
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M8 3h8v2H8V3zm0 2H6v4H4v12h16V9h-2V5h-2v4H8V5zm8 6h2v8H6v-8h2v6h2v-4h2v2h2v-2h2v-2z"/></svg>&nbsp;&nbsp;&nbsp;`,
       children: [
         {
           id: "Light Theme",
@@ -85,7 +159,27 @@
           }
         }
       ]
-    }
+    },
+    {
+          id:'getting started',
+          title: 'Getting Started',
+          parent: 'Docs',
+          handler: () => {
+            document.getElementById("docs").click();
+          }
+        },{
+          id:'installation',
+          title: 'Installation',
+          parent: 'Docs',
+        },{
+          id:'configuration',
+          title: 'Configuration',
+          parent: 'Docs',
+        },{
+          id:'naming',
+          title: 'ABEM Naming',
+          parent: 'Docs',
+        },
   ];
 	onMount(async () => {
     const ninja = document.querySelector("ninja-keys");
@@ -93,16 +187,67 @@
 	});
 </script>
 
-<ninja-keys id="ninja-keys" class="dark:text-white dark:placeholder-dark-300" placeholder="Tapez votre recherche..." class:dark="{mode}"></ninja-keys>
+<ninja-keys id="ninja-keys" class="dark:text-white dark:placeholder-dark-300" placeholder="Tapez votre recherche..." class:dark="{mode}">
+  <div class="flex content-center justify-left gap-2 py-3 px-2 opacity-75 border-t dark:border-t-dark-300 border-t-light-900" slot="footer">
+    <p class="flex content-center text-[0.7rem] align-bottom my-auto">
+      <span class="py-0.5 px-1 rounded dark:bg-white/10 bg-black/10 mx-2 -mt-0.5 rotate-z-180">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" class="my-auto"><path fill="currentColor" d="M18 16H8v2H6v-2H4v-2h2v-2h2v2h10V4h2v12h-2zM8 12v-2h2v2H8zm0 6v2h2v-2H8z"/></svg>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" class="my-auto !rotate-180"><path fill="currentColor" d="M16 4h-2v2h2v2H6v2H4v8h2v2h6v-2H6v-8h10v2h-2v2h2v-2h2v-2h2V8h-2V6h-2V4z"/></svg> -->
+      </span>
+      selectionner
+    </p>
+    <p class="flex content-center text-[0.7rem] align-bottom my-auto">
+      <span class="py-0.5 px-1 rounded dark:bg-white/10 bg-black/10 mx-1 -mt-0.50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" class="my-auto"><path fill="currentColor" d="M11 4h2v12h2v2h-2v2h-2v-2H9v-2h2V4zM7 14v2h2v-2H7zm0 0v-2H5v2h2zm10 0v2h-2v-2h2zm0 0v-2h2v2h-2z"/></svg>
+      </span>
+      <span class="py-0.5 px-1 rounded dark:bg-white/10 bg-black/10 ml-1 mr-2 -mt-0.5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" class="my-auto"><path fill="currentColor" d="M11 20h2V8h2V6h-2V4h-2v2H9v2h2v12zM7 10V8h2v2H7zm0 0v2H5v-2h2zm10 0V8h-2v2h2zm0 0v2h2v-2h-2z"/></svg>
+      </span>
+      naviguer
+    </p>
+    <p class="flex content-center text-[0.7rem] align-bottom my-auto">
+      <span class="py-0.5 px-1 rounded dark:bg-white/10 bg-black/10 mx-2 -mt-0.5 font-vt">
+        ESC
+      </span>
+      fermer
+    </p>
+    <p class="flex content-center text-[0.7rem] align-bottom my-auto">
+      <span class="py-0.5 px-1 rounded dark:bg-white/10 bg-black/10 mx-2 -mt-0.5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" class="my-auto"><path fill="currentColor" d="M21 5H7v2H5v2H3v2H1v2h2v2h2v2h2v2h16V5h-2zM7 17v-2H5v-2H3v-2h2V9h2V7h14v10H7zm8-6h-2V9h-2v2h2v2h-2v2h2v-2h2v2h2v-2h-2v-2zm0 0V9h2v2h-2z"/></svg>
+      </span>
+      menu précédent
+    </p>
+  </div>
+</ninja-keys>
+
 <nav class="backdrop-blur-lg backdrop-filter bg-white/30 dark:bg-gray-900/30  py-3 px-12 transition-colors fixed w-full">
   <div class="container grid grid-cols-2 mx-auto">
-    <section>
+    <section class="flex content-center">
       <a href="/" class="group">
         <img src="/image/Feuilleui_logo_withBorder-slim-sm.png" alt="logo de feuille UI" class="transition-all h-10 p-0 hidden dark:inline-block group-hover:hidden">
         <img src="/image/Feuilleui_logo_withBorder-large.png" alt="logo de feuille UI" class="transition-all h-10 p-0 hidden dark:group-hover:inline-block group-hover:hidden">
         <img src="/image/Feuilleui_logo-slim-sm.png" alt="logo de feuille UI" class="transition-all h-10 p-0 dark:hidden group-hover:hidden">
         <img src="/image/Feuilleui_logo-large.png" alt="logo de feuille UI" class="transition-all h-10 p-0 hidden group-hover:inline-flex dark:hidden dark:group-hover:hidden">
       </a>
+      <span class="my-auto text-xs rounded px-1.5 py-0.5 bg-[rgba(0,255, 0,.031)] text-[rgba(0,255,0,.824)] border-[rgba(0,255,0,.226)] inline-flex items-center justify-center border font-medium">Beta</span>
+      <!-- <span class="text-xs rounded px-1.5 py-0.5 bg-[rgba(0,187,255,.031)] text-[rgba(0,229,254,.824)] border-[rgba(2,200,255,.226)] inline-flex items-center justify-center border font-medium">Beta</span> -->
+
+      <div class="flex content-center my-auto font-light text-[0.7rem] ml-7 group cursor-pointer">
+        <span class="my-auto pb-0.5">Appuyer sur </span>
+        <span class="transition-all group-hover:hidden mr-0.5 ml-1.5 my-auto text-xs rounded p-0.5 bg-white/10 border-[rgba(255,255,255,.226)] inline-flex items-center justify-center border font-medium">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="currentColor" d="M4 2H2v8h2V2zm16 0h2v8h-2V2zm-6 6h-4V2H4v2h4v4H4v2h4v4H4v2h4v4H4v2h6v-6h4v6h2v-6h4v-2h-4v-4h4V8h-4V2h-2v6zm-4 6v-4h4v4h-4zM20 2h-4v2h4V2zM2 14h2v8H2v-8zm14 6h4v2h-4v-2zm6-6h-2v8h2v-8z"/></svg>
+        </span>
+        <span class="transition-all hidden group-hover:inline-flex mr-0.5 ml-1.5 my-auto text-xs rounded p-0.5 bg-[rgba(0,255, 0,.031)] border-[rgba(0,255,0,.226)] inline-flex items-center justify-center border font-medium">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="rgba(0,255,0,.824)" d="M4 2H2v8h2V2zm16 0h2v8h-2V2zm-6 6h-4V2H4v2h4v4H4v2h4v4H4v2h4v4H4v2h6v-6h4v6h2v-6h4v-2h-4v-4h4V8h-4V2h-2v6zm-4 6v-4h4v4h-4zM20 2h-4v2h4V2zM2 14h2v8H2v-8zm14 6h4v2h-4v-2zm6-6h-2v8h2v-8z"/></svg>
+        </span> 
+        <span class="transition-all group-hover:hidden ml-0.5 mr-1.5 my-auto text-white rounded px-1 py-0.5 bg-white/10 border-[rgba(255,255,255,.226)] inline-flex items-center justify-center border font-medium">
+          K
+        </span> 
+        <span class="transition-all group-hover:inline-flex hidden ml-0.5 mr-1.5 my-auto text-[rgba(0,255,0,.824)] rounded px-1 py-0.5 bg-[rgba(0,255, 0,.031)] border-[rgba(0,255,0,.226)] inline-flex items-center justify-center border font-medium">
+          K
+        </span> 
+        <span class="my-auto pb-0.5"> pour faire une recherche</span>
+      </div>
     </section>
     <section class="flex justify-end content-center gap-8">
       <a id="home" href="/" class="a_navBar__item">Get&nbsp;started</a>
@@ -126,7 +271,7 @@
 
 <style>
     ninja-keys {
-      --ninja-overflow-background: rgba(255,255,255, .9);
+      --ninja-overflow-background: rgba(177,177,177, .6);
     }
     
     ninja-keys.dark {

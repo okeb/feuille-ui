@@ -14,6 +14,8 @@ export default defineConfig({
         body: ['Unbounded', 'ui-sans-serif', 'system-ui'],
         over: ['Overpass', 'sans-serif'],
         unbounded: ['Unbounded', 'cursive'],
+        prest: ['Press Start 2P', 'VT323', 'monospace'],
+        vt: ['VT323', 'monospace'],
         sans: ['Work Sans', 'sans-serif', 'ui-sans-serif', 'system-ui']
       },
       colors: {
