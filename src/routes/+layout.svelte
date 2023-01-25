@@ -187,6 +187,86 @@
 	});
 </script>
 
+<nav class="backdrop-blur-lg backdrop-filter bg-white/30 dark:bg-black/30  py-3 <md:px-8 px-12 transition-colors fixed w-full">
+  <div class="container grid grid-cols-2 <lg:grid-cols-3 mx-auto">
+    <section class="flex content-center">
+      <a href="/" class="">
+        <img src="/image/Feuilleui_logo_minimalist.png" alt="logo de feuille UI" class="transition-all <md:(h-8 py-1 my-1) h-10 p-0 hidden dark:inline-block">
+        <!-- <img src="/image/Feuilleui_logo_withBorder-large.png" alt="logo de feuille UI" class="transition-all h-10 p-0 hidden dark:group-hover:inline-block group-hover:hidden"> -->
+        <img src="/image/Feuilleui_logo-slim-sm.png" alt="logo de feuille UI" class="transition-all <md:(h-8 py-1 my-1) h-10 p-0 dark:hidden">
+        <!-- <img src="/image/Feuilleui_logo-large.png" alt="logo de feuille UI" class="transition-all h-10 p-0 hidden group-hover:inline-flex dark:hidden dark:group-hover:hidden"> -->
+      </a>
+
+      <!-- <span class="my-auto text-xs rounded px-1.5 py-0.5 bg-[rgba(0,255, 0,.031)] text-[rgba(0,255,0,.824)] border-[rgba(0,255,0,.226)] inline-flex items-center justify-center border font-medium">Beta</span> -->
+
+      <!-- <span class="my-auto text-xs rounded px-1.5 py-0.5 bg-[rgba(0,187,255,.031)] text-[rgba(0,229,254,.824)] border-[rgba(2,200,255,.226)] inline-flex items-center justify-center border font-medium">Beta</span> -->
+
+      <div class="flex content-center my-auto font-light text-[0.7rem] ml-7 group cursor-pointer <lg:hidden">
+        <span class="my-auto pb-0.5">Appuyer sur </span>
+        <span class="transition-all group-hover:hidden mr-0.5 ml-1.5 my-auto text-xs rounded p-0.5 dark:bg-white/10 bg-black/10 dark:border-[rgba(255,255,255,.226)] border-black/10 inline-flex items-center justify-center border font-medium">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="currentColor" d="M4 2H2v8h2V2zm16 0h2v8h-2V2zm-6 6h-4V2H4v2h4v4H4v2h4v4H4v2h4v4H4v2h6v-6h4v6h2v-6h4v-2h-4v-4h4V8h-4V2h-2v6zm-4 6v-4h4v4h-4zM20 2h-4v2h4V2zM2 14h2v8H2v-8zm14 6h4v2h-4v-2zm6-6h-2v8h2v-8z"/></svg>
+        </span>
+        <span class="transition-all hidden group-hover:inline-flex mr-0.5 ml-1.5 my-auto text-xs rounded p-0.5 bg-[rgba(0,255, 0,.031)] border-[rgba(0,255,0,.226)] inline-flex items-center justify-center border font-medium">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="rgba(0,255,0,.824)" d="M4 2H2v8h2V2zm16 0h2v8h-2V2zm-6 6h-4V2H4v2h4v4H4v2h4v4H4v2h4v4H4v2h6v-6h4v6h2v-6h4v-2h-4v-4h4V8h-4V2h-2v6zm-4 6v-4h4v4h-4zM20 2h-4v2h4V2zM2 14h2v8H2v-8zm14 6h4v2h-4v-2zm6-6h-2v8h2v-8z"/></svg>
+        </span> 
+        <span class="transition-all group-hover:hidden ml-0.5 mr-1.5 my-auto text-gray-700 dark:text-white rounded px-1 py-0.5 dark:bg-white/10 border-black/10 bg-black/10 dark:border-[rgba(255,255,255,.226)] inline-flex items-center justify-center border font-medium">
+          K
+        </span> 
+        <span class="transition-all group-hover:inline-flex hidden ml-0.5 mr-1.5 my-auto text-[rgba(0,255,0,.824)] rounded px-1 py-0.5 bg-[rgba(0,255, 0,.031)] border-[rgba(0,255,0,.226)] inline-flex items-center justify-center border font-medium">
+          K
+        </span> 
+        <span class="my-auto pb-0.5"> pour faire une recherche</span>
+      </div>
+    </section>
+    <section class="flex justify-end content-center gap-8 <md:gap-7 <lg:col-span-2">
+
+      <a id="home" href="/" class="a_navBar__item  <md:hidden">Get&nbsp;started</a>
+      <a id="docs" href="/documentation" class="a_navBar__item  <md:inline-flex hidden">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"><path fill="currentColor" d="M21 22H3V2h12v2h2v2h2v2h2v14zM17 6h-2v2h2V6zM5 4v16h14V10h-6V4H5zm8 12H7v2h6v-2zm-6-4h10v2H7v-2zm4-4H7v2h4V8z"/></svg>&nbsp; -->
+        Documentation
+      </a>
+
+      <a id="docs" href="/documentation" class="a_navBar__item  <md:hidden">Documentation&nbsp;API</a>
+
+      <a id="login" href="/" class="a_navBar__item <md:hidden">Connexion</a>
+
+      <!-- <a id="menu" href="/" class="a_navBar__item hidden <md:inline-flex">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg>
+      </a> -->
+
+      <a id="github" href="/" class="a_navBar__item <md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="my-auto inline-flex"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+
+      <!-- <div class="group my-auto flex cursor-pointer hidden <md:inline-flex">
+        <div class="group-hover:hidden flex justify-start border-1 border-gray-100/40  content-center my-auto gap-2 dark:text-white font-light rounded-lg py-2 px-2.5 transition-all" style="box-shadow:-4px 0px 5px rgba(5, 162, 194, 0.3), 0px 0px 7px rgba(112, 225, 200, 0.3), 4px 0px 7px rgba(255, 178, 36, 0.3)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="rgba(156, 163, 175)" d="M6 2h8v2H6V2zM4 6V4h2v2H4zm0 8H2V6h2v8zm2 2H4v-2h2v2zm8 0v2H6v-2h8zm2-2h-2v2h2v2h2v2h2v2h2v-2h-2v-2h-2v-2h-2v-2zm0-8h2v8h-2V6zm0 0V4h-2v2h2z"/></svg>
+          <span class="text-xs text-gray-400 py-0 my-auto transition-all">Recherche...</span>
+        </div>
+        <div class="hidden group-hover:flex justify-start content-center my-auto gap-2 dark:text-white font-light rounded-lg border-1 border-gray-100/40 py-2 px-2.5 transition-all" style="box-shadow:-8px 0px 15px rgba(5, 162, 194, 0.3), 0px 0px 20px rgba(112, 225, 200, 0.3), 8px 0px 20px rgba(255, 178, 36, 0.3)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M6 2h8v2H6V2zM4 6V4h2v2H4zm0 8H2V6h2v8zm2 2H4v-2h2v2zm8 0v2H6v-2h8zm2-2h-2v2h2v2h2v2h2v2h2v-2h-2v-2h-2v-2h-2v-2zm0-8h2v8h-2V6zm0 0V4h-2v2h2z"/></svg>
+          <span class="text-xs bg-clip-text bg-gradient-to-tl from-current via-light-800 to-gray-500 py-0 my-auto">Recherche...</span>
+        </div>
+      </div>  -->
+
+      <div class="a_navBar__item" on:click={toggleMode} on:keypress={() => {console.log(mode)}}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="transition-all hidden dark:inline-flex my-auto"><path fill="currentColor" d="M13 0h-2v4h2V0ZM0 11v2h4v-2H0Zm24 0v2h-4v-2h4ZM13 24h-2v-4h2v4ZM8 6h8v2H8V6ZM6 8h2v8H6V8Zm2 10v-2h8v2H8Zm10-2h-2V8h2v8Zm2-14h2v2h-2V2Zm0 2v2h-2V4h2Zm2 18h-2v-2h2v2Zm-2-2h-2v-2h2v2ZM4 2H2v2h2v2h2V4H4V2ZM2 22h2v-2h2v-2H4v2H2v2Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="transition-all inline-flex dark:hidden my-auto"><path fill="currentColor" d="M6 2h8v2h-2v2h-2V4H6V2ZM4 6V4h2v2H4Zm0 10H2V6h2v10Zm2 2H4v-2h2v2Zm2 2H6v-2h2v2Zm10 0v2H8v-2h10Zm2-2v2h-2v-2h2Zm-2-4v-2h2v-2h2v8h-2v-4h-2Zm-6 0h6v2h-6v-2Zm-2-2h2v2h-2v-2Zm0 0V6H8v6h2Zm8-10h2v2h2v2h-2v2h-2V6h-2V4h2V2Z"/></svg>
+      </div>
+
+      <a id="search" href="/" class="a_navBar__item hidden <md:inline-flex">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M6 2h8v2H6V2zM4 6V4h2v2H4zm0 8H2V6h2v8zm2 2H4v-2h2v2zm8 0v2H6v-2h8zm2-2h-2v2h2v2h2v2h2v2h2v-2h-2v-2h-2v-2h-2v-2zm0-8h2v8h-2V6zm0 0V4h-2v2h2z"/>
+        </svg>
+      </a>
+    </section>
+  </div>
+</nav>
+
+<main class="container mx-auto pt-20">
+  <slot/>
+</main>
+
 <ninja-keys id="ninja-keys" class="dark:text-white dark:placeholder-dark-300" placeholder="Tapez votre recherche..." class:dark="{mode}">
   <div class="flex content-center justify-left gap-2 py-3 px-2 opacity-75 border-t dark:border-t-dark-300 border-t-light-900" slot="footer">
     <p class="flex content-center text-[0.7rem] align-bottom my-auto">
@@ -219,54 +299,6 @@
     </p>
   </div>
 </ninja-keys>
-
-<nav class="backdrop-blur-lg backdrop-filter bg-white/30 dark:bg-gray-900/30  py-3 px-12 transition-colors fixed w-full">
-  <div class="container grid grid-cols-2 mx-auto">
-    <section class="flex content-center">
-      <a href="/" class="group">
-        <img src="/image/Feuilleui_logo_withBorder-slim-sm.png" alt="logo de feuille UI" class="transition-all h-10 p-0 hidden dark:inline-block group-hover:hidden">
-        <img src="/image/Feuilleui_logo_withBorder-large.png" alt="logo de feuille UI" class="transition-all h-10 p-0 hidden dark:group-hover:inline-block group-hover:hidden">
-        <img src="/image/Feuilleui_logo-slim-sm.png" alt="logo de feuille UI" class="transition-all h-10 p-0 dark:hidden group-hover:hidden">
-        <img src="/image/Feuilleui_logo-large.png" alt="logo de feuille UI" class="transition-all h-10 p-0 hidden group-hover:inline-flex dark:hidden dark:group-hover:hidden">
-      </a>
-      <span class="my-auto text-xs rounded px-1.5 py-0.5 bg-[rgba(0,255, 0,.031)] text-[rgba(0,255,0,.824)] border-[rgba(0,255,0,.226)] inline-flex items-center justify-center border font-medium">Beta</span>
-      <!-- <span class="text-xs rounded px-1.5 py-0.5 bg-[rgba(0,187,255,.031)] text-[rgba(0,229,254,.824)] border-[rgba(2,200,255,.226)] inline-flex items-center justify-center border font-medium">Beta</span> -->
-
-      <div class="flex content-center my-auto font-light text-[0.7rem] ml-7 group cursor-pointer">
-        <span class="my-auto pb-0.5">Appuyer sur </span>
-        <span class="transition-all group-hover:hidden mr-0.5 ml-1.5 my-auto text-xs rounded p-0.5 bg-white/10 border-[rgba(255,255,255,.226)] inline-flex items-center justify-center border font-medium">
-          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="currentColor" d="M4 2H2v8h2V2zm16 0h2v8h-2V2zm-6 6h-4V2H4v2h4v4H4v2h4v4H4v2h4v4H4v2h6v-6h4v6h2v-6h4v-2h-4v-4h4V8h-4V2h-2v6zm-4 6v-4h4v4h-4zM20 2h-4v2h4V2zM2 14h2v8H2v-8zm14 6h4v2h-4v-2zm6-6h-2v8h2v-8z"/></svg>
-        </span>
-        <span class="transition-all hidden group-hover:inline-flex mr-0.5 ml-1.5 my-auto text-xs rounded p-0.5 bg-[rgba(0,255, 0,.031)] border-[rgba(0,255,0,.226)] inline-flex items-center justify-center border font-medium">
-          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="rgba(0,255,0,.824)" d="M4 2H2v8h2V2zm16 0h2v8h-2V2zm-6 6h-4V2H4v2h4v4H4v2h4v4H4v2h4v4H4v2h6v-6h4v6h2v-6h4v-2h-4v-4h4V8h-4V2h-2v6zm-4 6v-4h4v4h-4zM20 2h-4v2h4V2zM2 14h2v8H2v-8zm14 6h4v2h-4v-2zm6-6h-2v8h2v-8z"/></svg>
-        </span> 
-        <span class="transition-all group-hover:hidden ml-0.5 mr-1.5 my-auto text-white rounded px-1 py-0.5 bg-white/10 border-[rgba(255,255,255,.226)] inline-flex items-center justify-center border font-medium">
-          K
-        </span> 
-        <span class="transition-all group-hover:inline-flex hidden ml-0.5 mr-1.5 my-auto text-[rgba(0,255,0,.824)] rounded px-1 py-0.5 bg-[rgba(0,255, 0,.031)] border-[rgba(0,255,0,.226)] inline-flex items-center justify-center border font-medium">
-          K
-        </span> 
-        <span class="my-auto pb-0.5"> pour faire une recherche</span>
-      </div>
-    </section>
-    <section class="flex justify-end content-center gap-8">
-      <a id="home" href="/" class="a_navBar__item">Get&nbsp;started</a>
-      <a id="docs" href="/documentation" class="a_navBar__item">Documentation&nbsp;API</a>
-      <a id="login" href="/" class="a_navBar__item">Connexion</a>
-      <a id="github" href="/" class="a_navBar__item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="my-auto inline-flex"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-      </a>
-      <div class="a_navBar__item" on:click={toggleMode} on:keypress={() => {console.log(mode)}}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="transition-all hidden dark:inline-flex my-auto"><path fill="currentColor" d="M13 0h-2v4h2V0ZM0 11v2h4v-2H0Zm24 0v2h-4v-2h4ZM13 24h-2v-4h2v4ZM8 6h8v2H8V6ZM6 8h2v8H6V8Zm2 10v-2h8v2H8Zm10-2h-2V8h2v8Zm2-14h2v2h-2V2Zm0 2v2h-2V4h2Zm2 18h-2v-2h2v2Zm-2-2h-2v-2h2v2ZM4 2H2v2h2v2h2V4H4V2ZM2 22h2v-2h2v-2H4v2H2v2Z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="transition-all inline-flex dark:hidden my-auto"><path fill="currentColor" d="M6 2h8v2h-2v2h-2V4H6V2ZM4 6V4h2v2H4Zm0 10H2V6h2v10Zm2 2H4v-2h2v2Zm2 2H6v-2h2v2Zm10 0v2H8v-2h10Zm2-2v2h-2v-2h2Zm-2-4v-2h2v-2h2v8h-2v-4h-2Zm-6 0h6v2h-6v-2Zm-2-2h2v2h-2v-2Zm0 0V6H8v6h2Zm8-10h2v2h2v2h-2v2h-2V6h-2V4h2V2Z"/></svg>
-      </div>
-    </section>
-  </div>
-</nav>
-
-<main class="container mx-auto pt-20">
-  <slot/>
-</main>
 
 
 <style>
